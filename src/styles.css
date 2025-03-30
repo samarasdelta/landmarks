@@ -6,7 +6,9 @@ html, body {
 
 body {
   background: linear-gradient(to bottom, #cad8ea, #979dcf); 
-  background-size: 100% 100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position: top center;
   color: #333;
   justify-content: center;
