@@ -30,6 +30,11 @@ cd landmarks
 npm i
 ```
 
+- Install dotenv package
+```
+npm i dotenv --save
+```
+
 - Create a .env file` in the root directory of the project and populate it with the following parameters using your own credentials
 ```
 APP_ID
