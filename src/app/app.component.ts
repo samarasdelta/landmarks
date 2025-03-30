@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';  // Import FormsModule for ngModel
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true, // Mark this as a standalone component
+  imports: [RouterModule, FormsModule], // Import RouterModule and FormsModule
+  template: `    
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-  title = 'landmarks';
-}
+export class AppComponent {}

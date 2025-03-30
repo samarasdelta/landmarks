@@ -1,0 +1,5 @@
+@import '../landmark-list/landmark-list.component.css';
+
+.landmark-image {
+  cursor: pointer;
+}

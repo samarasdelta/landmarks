@@ -1,0 +1,33 @@
+<div *ngIf="landmarks.length === 0" class="text-center my-4">
+  <p class="text-muted">Loading landmarks...</p>
+</div>
+
+<div *ngIf="landmarks.length !== 0" class="text-center my-4">
+  <h1 class="main-header-text" style="text-align: center;">Landmarks list</h1>
+</div>
+
+<div *ngIf="landmarks.length > 0" class="container p-1">
+  <div class="search-wrapper">
+    <div class="search-box">
+      <input type="text" class="form-control search-input" placeholder="Search.." [(ngModel)]="searchTerm"
+        (input)="filterLandmarks()" />
+    </div>
+  </div>
+  <div *ngFor="let landmark of filterLandmarks()" class="card p-3">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-2">
+        <img class="img-fluid rounded landmark-image" [src]="landmark.photo_thumb?.url" alt="Landmark Image">
+      </div>
+      <div class="col-md-10">
+        <div class="card-body">
+          <h4 class="card-title">
+            <a [routerLink]="['/', landmark.title]" class="text-decoration-none">
+              {{ landmark.title }}
+            </a>
+          </h4>
+          <p class="card-text">{{ landmark.short_info }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

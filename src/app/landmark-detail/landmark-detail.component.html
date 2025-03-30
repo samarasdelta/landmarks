@@ -1,0 +1,29 @@
+<div class="container body-page">
+  <div class="card mb-4 p-3">
+    <div class="row g-0 align-items-center">
+      <div class="col-md-2 text-center">
+        <img class="img-fluid rounded landmark-image" [src]="landmark?.photo_thumb?.url" alt="Landmark Image"
+          (click)="openImage(landmark.photo?.url)">
+      </div>
+      <div class="col-md-10">
+        <div class="card-body">
+          <h4 class="card-title">
+            {{ landmark?.title }}
+          </h4>
+          <p class="card-text">{{ landmark?.short_info }}</p>
+        </div>
+      </div>
+      <div class="col-md-12 mt-4">
+        <p class="card-text">{{ landmark?.description }}</p>
+        <div class="d-flex justify-content-end gap-2">
+          <button class="btn btn-secondary" (click)="goBack()">
+            Back
+          </button>
+          <button class="btn btn-primary" (click)="openUrl(landmark.url)" target="_blank">
+            Explore
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
